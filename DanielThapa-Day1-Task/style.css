@@ -1,0 +1,30 @@
+
+.container{
+    width:80%;
+    margin:0 auto;
+}
+
+/* Counter Style */
+.btn{
+    border-style: none;
+    padding: 10px;
+    margin-right: 5px;
+    width: 100px;
+    background-color: paleturquoise;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+small{
+    color: red;
+}
+
+/* Attendance style */
+input{
+    padding:5px;
+    margin: 5px;
+}
+li{
+    margin:10px;
+}
