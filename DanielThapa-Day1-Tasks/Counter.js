@@ -1,21 +1,40 @@
 import React, { useState } from 'react'
 
-var initialState = 0
+const INITIAL_COUNT_STATE = 0;
+const INITIAL_MSG_STATE = ""
+const MESSAGE = `Value can't be than ${INITIAL_COUNT_STATE}`
+
 
 export default function Counter() {
 
-    const [count, setCount] = useState(initialState)
+    const [count, setCoount] = useState(0)
+    const [msg, setMsg] = useState(INITIAL_MSG_STATE)
+
+    const incrementHandler = () => {
+        setMsg("")
+        setCoount((prevState) => prevState + 2)
+    }
+
+    const decrementHandler = () => {
+        count <= 0 ?
+        setMsg(MESSAGE):
+        setCoount(prevState => prevState - 2)
+    }
+
+    const resetHandler = () => {
+        setMsg("")
+        setCoount(0)
+    }
 
     return (
         <div>
-            <h1>Counter</h1>
-            <button class="btn" onClick={() => setCount(count + 1)}>Increment</button>
-            <button class="btn" onClick={() => setCount(0)}>Reset</button>
-            <button class="btn" onClick={
-                count == 0 ? 0 : () => setCount(count - 1)}
-                >Decrement</button>
-                <p>Current Value of Count is :</p>
-            <h2>{count}</h2>
+            <h2>Counter</h2>
+            <button className="btn" onClick={incrementHandler}>Increment</button>
+            <button className="btn" onClick={resetHandler}>Reset</button>
+            <button className="btn" onClick={decrementHandler}>Decrement</button>
+            <p>The current value of count is: </p>
+            <h3>{count}</h3>
+            <small>{msg}</small>
         </div>
     )
 }
