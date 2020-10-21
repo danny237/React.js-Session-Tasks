@@ -24,9 +24,9 @@ const IncreDecre = () => {
         <div className="firstTask">
             <h4> Increment and Decrement </h4>
             <span> {value} </span> <br />
-            <button onClick={increBtn}>Increment</button>
-            <button onClick={decreBtn}>Decrement</button>
-            <button onClick={reset}>Reset</button>
+            <button onClick={()=>increBtn()}>Increment</button>
+            <button onClick={()=>decreBtn()}>Decrement</button>
+            <button onClick={()=>reset()}>Reset</button>
             <p> {msg} </p>
         </div>
         </>
