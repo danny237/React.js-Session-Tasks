@@ -14,7 +14,6 @@ const AttendeeList = () => {
     }
 
     const btn = () => {
-        console.log(Attendee);
         setMsg([...msg, {
             Name: name,
             Number: number
