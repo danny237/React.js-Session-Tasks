@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './style.css'
 
 export default function AttendanceList() {
 
@@ -7,7 +8,6 @@ export default function AttendanceList() {
     const [studentList, setStudent] = useState([]);
 
     const addStudent = () => {
-        console.log(name, contactNumber)
 
         setStudent([...studentList, {
             name: name,
@@ -21,6 +21,7 @@ export default function AttendanceList() {
             <div>
                 <label htmlFor="name">Name: </label><br/>
                 <input
+                type="text"
                 id="name" 
                 placeholder="Name" 
                 onChange = {(e) => setName(e.target.value)}
@@ -30,12 +31,13 @@ export default function AttendanceList() {
             <div>
                 <label htmlFor="contact">Contact Number</label><br/>
                 <input
+                type="number"
                 id="contact"
                 placeholder="Number"
                 onChange = {(e) => setContactNumber(e.target.value)}
                 />
             </div>
-                <button className="btn" type="submit"  onClick ={addStudent}>Add</button>
+                <button className="btn" type="submit"  onClick ={() => addStudent()}>Add</button>
                 <button className="btn" type="submit"  onClick ={() => setStudent([])}>Clear List</button>
                 <ol>
                 {
