@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 const AttendeeList = () => {
     const [name, setName] =useState("");
     const [number, setNumber] = useState("");
-    let Attendee= [];
-    const [msg, setMsg] =useState(Attendee);
+    const [msg, setMsg] =useState([]);
 
     const nameEvent =(event)=>{
         setName(event);
