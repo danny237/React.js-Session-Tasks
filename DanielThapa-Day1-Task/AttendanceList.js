@@ -79,7 +79,7 @@ export default function AttendanceList() {
                 placeholder="Name" 
                 onChange = {(e) => setName(e.target.value)}
                 /><br/>
-                <small>{ isNameEmpty ? errorNameMsg : '' }</small>
+                { isNameEmpty && <small> { errorNameMsg } </small>}
             </div>
             
             <div>
@@ -91,8 +91,8 @@ export default function AttendanceList() {
                 placeholder="Number"
                 onChange = {(e) => setContactNumber(e.target.value)}
                 /><br/>
-                <small>{ isContactNoEmpty ? contactError : ''}</small>
-                <small className="success">{ successMsg ? successAddMsg : ''}</small>
+                { isContactNoEmpty && <small> { contactError } </small> }
+                { successMsg && <small className="success"> { successAddMsg }</small> }
             </div>
 
             <button 
