@@ -18,13 +18,18 @@
 }
 small{
     color: red;
+    margin: 4px 0px;
 }
 
 /* Attendance style */
 input{
     padding:5px;
-    margin: 5px;
+    margin: 5px 0px;
 }
 li{
     margin:10px;
+}
+.success{
+    color: green;
+    margin:5px;
 }
