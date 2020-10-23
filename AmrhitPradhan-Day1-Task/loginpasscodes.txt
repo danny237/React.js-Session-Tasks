@@ -1,2 +1,0 @@
-user-code : admin
-pass-code : adminzz
