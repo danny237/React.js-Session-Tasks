@@ -6,20 +6,16 @@
 // <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
+// import constants
+
 import React, { useState } from 'react'
 import './LoginStyle.css'
 
-const INITIAL_STATE = ""
-const EMAIL_FORMAT = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const TEST_PASSWORD = "Test1234"
-const ERROR_MESSAGE = (<div className="alert alert-danger alert-dismissible">
-                        <p className="close" data-dismiss="alert" aria-label="close">&times;</p>
-                        Your Email or Password didn't matched !
-                        </div>)
-const SUCCESS_MESSAGE = (<div className="alert alert-success alert-dismissible">
-                            <p className="close" data-dismiss="alert" aria-label="close">&times;</p>
-                            You are authenticated !
-                            </div>)
+import { INITIAL_STATE,
+        EMAIL_FORMAT,
+        TEST_PASSWORD,
+        ERROR_MESSAGE,
+        SUCCESS_MESSAGE } from './Constants'
 
 export default function Login() {
 
