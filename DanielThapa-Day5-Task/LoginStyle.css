@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');.login-page{
-    background-color: #56BAED;;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+.login-page{
+    background-color: #56BAED;
     width: 100%;
     height: 100vh;
 }

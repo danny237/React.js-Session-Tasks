@@ -7,7 +7,3 @@ export const ERROR_MESSAGE = (<div className="alert alert-danger alert-dismissib
                         <p className="close" data-dismiss="alert" aria-label="close">&times;</p>
                         Your Email or Password didn't matched !
                         </div>)
-export const SUCCESS_MESSAGE = (<div className="alert alert-success alert-dismissible">
-                            <p className="close" data-dismiss="alert" aria-label="close">&times;</p>
-                            You are authenticated !
-                            </div>)

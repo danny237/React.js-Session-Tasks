@@ -6,23 +6,19 @@
 // <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-// import constants
-
 import React, { useState } from 'react'
 import './LoginStyle.css'
 
 import { INITIAL_STATE,
         EMAIL_FORMAT,
         TEST_PASSWORD,
-        ERROR_MESSAGE,
-        SUCCESS_MESSAGE } from './Constants'
+        ERROR_MESSAGE } from './Constants'
 
-export default function Login() {
+export default function Login(props) {
 
     const [email, setEmail] = useState(INITIAL_STATE)
     const [password, setPassword] = useState(INITIAL_STATE)
     const [errorStatus, setErrorStatus] = useState(false)
-    const [isAuthenticated, setAuthenticated] = useState(false)
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -33,15 +29,26 @@ export default function Login() {
         setErrorStatus(false)
 
         // if email and password matched return true
-        // Please enter valid email and password = "Test1234"
+        // Please enter valid formatted email and password = "Test1234" otherwise return false
         const isAuthenticatedUser = () => {
             return (email.match(EMAIL_FORMAT) != null) && (password == TEST_PASSWORD)
         }
         
+        // if email and password is correct
+        const login = () => {
+            props.setLoggedIn(true)
+            props.history.push("/dashboard");
+        }
+
+        // if email and password is not correct
+        const loginError = () => {
+            props.setLoggedIn(false)
+        }
+        
         //Authenticated user
         isAuthenticatedUser() ?
-        setAuthenticated(true) :
-        setAuthenticated(false)
+        login() :
+        loginError()
     }
 
     return (
@@ -81,15 +88,9 @@ export default function Login() {
                                 className="btn col-5 my-3">Authenticate</button>
                             </div>
                     </form>
-
-                    {
-                        isAuthenticated && SUCCESS_MESSAGE
-                    }
-
                     {
                         errorStatus && ERROR_MESSAGE
                     }
-
                 </div>
             </div>
         </div>
