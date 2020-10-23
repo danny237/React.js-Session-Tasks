@@ -1,0 +1,14 @@
+Todays task files are:
+1) App.jsx
+2) Login.jsx
+3) Home.jsx
+4) index.css
+
+//additonalfiles
+loginpasscodes.txt >>> contains default username and password
+login_designURL.txt contains link of adobe xd design 
+LOGIN PAGE.png contains final design
+
+
+
+
